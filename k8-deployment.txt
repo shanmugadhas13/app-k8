@@ -7,7 +7,7 @@ pipeline{
 							steps{
 									sshagent(['ec2usr'])
 									{
-											sh 'scp -pr -o StrictHostKeyChecking=no /opt/project/k8-pipeline/deployment.yaml ec2-user@ec2-54-235-33-174.compute-1.amazonaws.com:/opt/devproj/'
+											sh 'scp -pr -o StrictHostKeyChecking=no /app-k8/deployment.yaml ec2-user@ec2-3-85-87-71.compute-1.amazonaws.com:/devproj/'
 									}
 							}
 					}
@@ -16,7 +16,7 @@ pipeline{
 							steps{
 									sshagent(['ec2usr'])
 									{
-											sh "ssh ec2-user@ec2-54-235-33-174.compute-1.amazonaws.com 'sudo kubectl apply -f /opt/devproj/deployment.yaml'"
+											sh "ssh ec2-user@ec2-3-85-87-71.compute-1.amazonaws.com 'sudo kubectl apply -f /devproj/deployment.yaml'"
 									}
 							}
 					}
@@ -25,7 +25,7 @@ pipeline{
 							steps{
 									sshagent(['ec2usr'])
 									{
-											sh "ssh ec2-user@ec2-54-235-33-174.compute-1.amazonaws.com 'sudo sh /opt/devproj/portfwd.sh  '"
+											sh "ssh ec2-user@ec2-3-85-87-71.compute-1.amazonaws.com 'sudo kubectl get pods '"
 									}
 							}
 					}
