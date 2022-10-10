@@ -15,7 +15,7 @@ spec:
      spec:
          containers:
            - name: nodejsapp
-             image: "shanmugha13/weatherapp"
+             image: "shanmugha13/weatherapp:latest"
              imagePullPolicy: Always
   replicas: 1
   selector:
