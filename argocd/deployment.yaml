@@ -17,18 +17,7 @@ spec:
            - name: nodejsapp
              image: "shanmugha13/weatherapp"
              imagePullPolicy: Always
-	     livenessProbe:
-	       httpGet:
-	         path: /health
-	         port: 80
-	       initialDelaySeconds: 300
-	       periodSeconds: 3
-	     readinessProbe:
-    	       httpGet:
-		 path: /health
-		 port: 80
-	       initialDelaySeconds: 180
-	       periodSeconds: 3			 
+                 
   replicas: 2
   selector:
     matchLabels:
