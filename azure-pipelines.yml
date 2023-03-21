@@ -1,11 +1,4 @@
 # Docker
-- task: InvokeRESTAPI@1
-  inputs:
-    connectionType: 'connectedServiceNameARM'
-    azureServiceConnection: 'My AZ13 (fb4f5f94-db74-4e5f-ab1d-e8b44650781a)'
-    method: 'GET'
-    urlSuffix: 'https://dev166121.service-now.com/api/now/table/change_request?sysparm_display_value=True&sysparm_fields=state&sysparm_limit=1&number=CHG0030001'
-    waitForCompletion: 'false'
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 #test1
