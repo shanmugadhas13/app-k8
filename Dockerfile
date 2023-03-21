@@ -4,7 +4,6 @@ COPY code/ /home/app
 WORKDIR /home/app
 RUN npm update
 RUN npm install -g npm@8.19.2
-RUN npm audit fix
 RUN npm update
 RUN npm install express
 RUN npm install ejs
